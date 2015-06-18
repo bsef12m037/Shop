@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "blockUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+ @using(Html.BeginForm("delPr", "deleteProduct", FormMethod.Post, new {enctype = "multipart/form-data"}))
+ {
+<label>Enter Product Id: </label> <input type="text" name ="item" />
+<input type ="submit" value ="DELETE" class ="btn btn-danger" />
+
+}

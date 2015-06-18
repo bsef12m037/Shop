@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
+     <script src = "../Scripts/bootstrap.js" > </script>
+            <script src="../Scripts/jquery.validate.min.js"></script>
+    <script src="../Scripts/jquery.validate.unobtrusive.min.js"></script>   
+
+    <link href = "../Content/bootstrap.css" rel = "stylesheet" />
+    <style >
+
+       .page-header
+       {
+           background-color:forestgreen;
+           height:15vw;
+       }
+       .page-footer
+       {
+           background-color:mintcream;
+           height:8vw;
+       }
+       .emp
+       {
+           height:4vw;
+       }
+      
+      
+       .nav navbar-nav
+       {
+           color:black;
+          
+
+       }
+      
+       body
+       {
+            background-color:whitesmoke;
+       }
+   </style>
+
+    
+</head>
+<body>
+     <div class ="row">
+                 <div class ="col-md-12">
+                      <div class ="page-header">
+       <h1> <label style ="color:white;font-size:6vw">DIGITALSHOP</label></h1>
+        <a class ="sign-in" href ="../signin/sign_in" style ="font-size:1.5vw">Sign In</a>
+        <a class ="sign-in" href ="../account/Account"style ="font-size:1.5vw">Create an account</a>
+                     </div>
+         </div>
+             </div>
+
+     <div class ="row">
+             
+    <nav class ="navbar navbar-default" role ="navigation" >
+       <div class ="col-md-12">
+       
+            <div>
+            <ul class ="nav navbar-nav" >
+                <li  style="font-size:1.5vw"> <a href ="../home/Home"  >Home</a></li>
+                <li style="font-size:1.5vw"><a href ="../Computers/computers" >COMPUTERS</a></li>
+                <li style="font-size:1.5vw"><a href ="../Cameras/cameras" >CAMERAS</a></li>
+                <li  style="font-size:1.5vw"><a href ="../Printers/printers">PRINTERS</a></li>
+                <li  style="font-size:1.5vw"><a href ="../Accessories/accessories" >ACCESSORIES</a></li>
+                
+            </ul>
+                </div>
+        
+                </div>
+              </nav>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+     <div class ="page-footer" >
+         <p>
+
+    © 2015 Digitalshop by BSEF12M037 
+
+</p>
+
+     </div>
+
+
+</body>
+
+</html>

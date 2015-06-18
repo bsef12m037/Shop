@@ -1,0 +1,14 @@
+﻿@model MvcProject.Models.product
+@{
+    ViewBag.Title = "blockUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+ @using(Html.BeginForm("addP", "addProduct", FormMethod.Post, new {enctype = "multipart/form-data"}))
+ {
+    @Html.TextAreaFor(model => model.Name);
+<label>Select Item : </label> <input type="file" name ="file1" />
+<input type ="submit" value ="ADD" class ="btn btn-danger" />
+
+}

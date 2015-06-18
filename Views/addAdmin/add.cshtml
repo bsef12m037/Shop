@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "add";
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+}
+
+<h2><b>Add Admin</b></h2>
+@model MvcProject.Models.user
+<p id="p1"></p>
+  @using(Html.BeginForm("add1", "addAdmin", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+
+<label> Admin : </label> @Html.TextBoxFor(model => model.username, new { @placeholder="username",id="username" })
+     <input type="button" id="b1" value="Check"/>
+       
+      <label id ="l1" style="color:red"></label>
+        <label id ="l2" style="color:green"></label>
+       @Scripts.Render("~/bundles/jquery")
+        <script>
+
+         $(document).ready(function () {
+
+         
+
+             $('#b1').click(function () {
+
+                 var userName = $('#UserName').val();
+
+              //   alert('User Name ='+ userName);
+              
+                 $.getJSON("/admin/checkUserName?uname=" + userName, function (data) {
+
+                     if (data) {
+                        
+                         $('#l1').text("User already exists in database");
+                         $('#l2').text("");
+
+                     }
+                     else {
+                         $('#l2').text("User Name is available");
+                         $('#l1').text("");
+                     }
+                 });
+
+             });
+
+         });
+    </script>
+      <br />
+<label> Password : </label>  @Html.TextBoxFor(model => model.pwd, new { placeholder="Password", type="password"  })
+    <br />
+<input type ="submit" value ="ADD" class ="btn btn-primary" />
+  }
